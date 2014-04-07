@@ -1,0 +1,20 @@
+NAME="tidyp"
+VERSION=1.04
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Fork of HTML tidy"
+DESCRIPTION="tidyp is a fork of tidy on SourceForge at http://tidy.sf.net.
+The library name is 'tidyp', and the command-line tool is also 'tidyp' but
+all internal API stays the same."
+HOMEPAGE="http://www.tidyp.com/"
+SRC_URI="https://github.com/downloads/petdance/tidyp/tidyp-${VERSION}.tar.gz"
+PATCH_URI="
+    http://pkgs.fedoraproject.org/cgit/tidyp.git/plain/tidy-outfile-raw.patch
+    http://pkgs.fedoraproject.org/cgit/tidyp.git/plain/tidyp-1.02-format.patch
+"
+
+PKG_NAMES="tidyp libtidyp1.04_0 libtidyp-devel"
+tidyp_CATEGORY="Text"
+tidyp_CONTENTS="usr/bin/tidyp.exe usr/share/doc/"
+libtidyp1_04_0_CONTENTS="usr/bin/cygtidyp-1-04-0.dll"
+libtidyp_devel_CONTENTS="usr/include/tidyp/ usr/lib/libtidyp.dll.a"
